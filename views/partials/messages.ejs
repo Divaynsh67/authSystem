@@ -1,0 +1,32 @@
+
+<% if(typeof errors != 'undefined'){ %> 
+    <% errors.forEach(err => { %>
+        <article class="message is-danger">
+            <div class="message-body">
+             <%= err.error %>
+            </div>
+          </article>
+    <% }) %>
+  <% } %> 
+
+  <% if(locals.success_msg!=""){ %> 
+    <article class="message is-success">
+        <div class="message-body">
+         <%= locals.success_msg %>
+        </div>
+      </article>
+ <% } %> 
+ <% if(locals.error_msg!=""){ %> 
+    <article class="message is-success">
+        <div class="message-body">
+         <%= locals.error_msg %>
+        </div>
+      </article>
+ <% } %> 
+ <% if(locals.error!=""){ %> 
+    <article class="message is-success">
+        <div class="message-body">
+         <%= locals.error %>
+        </div>
+      </article>
+ <% } %> 
